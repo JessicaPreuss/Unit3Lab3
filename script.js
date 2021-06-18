@@ -36,7 +36,62 @@ const addSubmission = (array, newName, newScore, newDate) => {
         date: newDate,
         passed: newScore >= 60
     };
-submissions.push(submission);
-}
+console.log(submissions.push(submission));
+};
 
-addSubmission();
+//declare a function named deleteSubmissionByIndex, parameters array and index//
+const deleteSubmissionByIndex = (array, index) => {
+    submissions.splice(index,1,);
+};
+//declare a function named deleteSubmissionByName, parameters array, name//
+
+
+const deleteSubmissionByName = (array, name) => {
+    const index = array.findIndex(element => element.name === name);
+    console.log(submissions.splice(index,1,));
+};
+
+//declare a function named editSubmission; parameters - array, index, score//
+
+const editSubmission = (array, index, score) => {
+    submissions[index].score = score; 
+    submissions[index].passed = score >= 60; 
+console.log(submissions);
+};
+
+//declare a function named findSubmissionByName; parameters (array, name)//
+
+const findSubmissionByName = (array, name) => {
+    const studentName = array.find(element => element.name === name);
+    console.log(studentName);
+};
+//declare a function names findLowestScore with parameter array//
+
+function findLowestScore (array) {
+    let scoreArray = array.map(a => a.score)
+        scoreArray.forEach(function(score){
+            score = Math.min(...scoreArray)
+            // console.log(score)
+            const findLow = array.find(element => element.score === score);
+            console.log(findLow);
+         scoreArray.length = 0;
+    })
+};
+
+//declare a function named findLowestScore parameter (array)//
+
+function findAverageScore (array) {
+    let scoreArray = array.map(a => a.score)
+    let sum = 0;
+    let total = 0;
+    for (let score of scoreArray) {
+        sum += score;
+        total = sum / scoreArray.length;
+    }
+    console.log(total);
+};
+
+//declare a function named filterPassing - Parameters (array)//
+function filterPassing (array) {
+    
+}
