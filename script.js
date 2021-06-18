@@ -98,7 +98,7 @@ function findAverageScore (array) {
         total = sum / scoreArray.length;
     }
     console.log(total);
-};
+}
 
 findAverageScore ();
 
@@ -106,7 +106,7 @@ findAverageScore ();
 function filterPassing (array) {
     const findPassing = array.filter(element => element.passed === true);
     console.log(findPassing);
-};
+}
 
 filterPassing ();
 
@@ -114,6 +114,6 @@ filterPassing ();
 function filter90AndAbove (array) {
     const find90Plus = array.filter(element => element.score >= 90 );
     console.log(find90Plus);
-};
+}
 
 filter90AndAbove ();
